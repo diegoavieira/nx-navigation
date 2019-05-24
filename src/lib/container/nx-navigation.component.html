@@ -1,0 +1,12 @@
+<div id="nx-navigation" [class.mobile]="isMobile">
+  <nx-toolbar-navigation
+    [style.display]="showToolbar ? 'flex' : 'none'"
+    (sidenavToggle)="onToggleSidenav()">
+  </nx-toolbar-navigation>
+  <nx-sidenav-navigation
+    [isMobile]="isMobile"
+    [opened]="opened"
+    (sidenavToggle)="onToggleSidenav()"
+    (showToolbar)="onShowToolbar($event)">
+  </nx-sidenav-navigation>
+</div>
